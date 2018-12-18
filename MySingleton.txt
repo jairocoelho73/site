@@ -1,11 +1,26 @@
 public class Incremental {
- public static Incremental intance;
- private Incremental() {
- }
  
- public static Incremental getInstace() {
- 	if (instance == null)
- 		instance = new Incremental();
- return = new Incremental();
- }
+	 private static Incremental intance;
+	 private static int count = 0;
+	 private int numero;
+ 
+	 public static Incremental getInstace() {
+	 	if (instance == null)
+	 		instance = new Incremental();
+	 	return instance;
+	 }
+	  private Incremental(){
+	 	numero = ++count;
+	 }
+	 public String toString() {
+	 	return "Incremental " + numero;
+	 }
+	
+}
+
+public class TesteIncremental {
+	public static void main(String[] args) {
+	 	for (int i = 0; i < 10; i++)
+	 		System.out.println( Incremental.getInstance() );
+	 }
 }
