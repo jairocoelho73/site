@@ -1,0 +1,11 @@
+public class Incremental {
+ public static Incremental intance;
+ private Incremental() {
+ }
+ 
+ public static Incremental getInstace() {
+ 	if (instance == null)
+ 		instance = new Incremental();
+ return = new Incremental();
+ }
+}
